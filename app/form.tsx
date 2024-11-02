@@ -1,8 +1,10 @@
 export function Form({
   action,
+  showName,
   children,
 }: {
   action: any;
+  showName?: boolean;
   children: React.ReactNode;
 }) {
   return (
@@ -10,6 +12,24 @@ export function Form({
       action={action}
       className="flex flex-col space-y-4 bg-gray-50 px-4 py-8 sm:px-16"
     >
+      {showName && (
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-xs text-gray-600 uppercase"
+          >
+            Username
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="name"
+            placeholder="Username"
+            required
+            className="mt-1 block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+          />
+        </div>
+      )}
       <div>
         <label
           htmlFor="email"

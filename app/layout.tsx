@@ -1,20 +1,20 @@
-import './globals.css';
+import "./globals.css";
 
-import { GeistSans } from 'geist/font/sans';
+import { GeistSans } from "geist/font/sans";
 
-let title = 'Next.js + Postgres Auth Starter';
+let title = "Spend Scout";
 let description =
-  'This is a Next.js starter kit that uses NextAuth.js for simple email + password login and a Postgres database to persist the data.';
+  "Keep track of your expenses and see how much you're spending on each category with your Spend Scout.";
 
 export const metadata = {
   title,
   description,
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title,
     description,
   },
-  metadataBase: new URL('https://nextjs-postgres-auth.vercel.app'),
+  metadataBase: new URL("https://spend-scout-eight.vercel.app/"),
 };
 
 export default function RootLayout({
